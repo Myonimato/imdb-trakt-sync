@@ -34,3 +34,4 @@ jobs:
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
       - name: Sync watchlist, lists and ratings
         run: go run cmd/imdb-trakt-sync/main.go
+      - uses: gautamkrishnar/keepalive-workflow@v1 # using the workflow with default settings
