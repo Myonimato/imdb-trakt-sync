@@ -6,6 +6,8 @@ on:
   schedule:
     - cron: "50 23 * * *" #sync only once at the end of the day
   workflow_dispatch:
+permissions:
+  contents: write
 
 env:
   IMDB_COOKIE_AT_MAIN: ${{ secrets.IMDB_COOKIE_AT_MAIN }}
