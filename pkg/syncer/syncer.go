@@ -201,7 +201,6 @@ func (s *Syncer) syncLists() error {
 			}
 		}
 	}
-  */
 	return nil
 }
 
