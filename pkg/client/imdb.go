@@ -404,9 +404,7 @@ func (c *IMDbClient) exportResource(url string) error {
 	if err = exportButton.Click(proto.InputMouseButtonLeft, 1); err != nil {
 		return fmt.Errorf("failure clicking on export resource button: %w", err)
 	}
-	if _, err = tab.Element("a.exp-pmpt__btn"); err != nil {
-		return fmt.Errorf("failure finding exports page button: %w", err)
-	}
+	tab.WaitRequestIdle(time.Second, nil, []string{"hblg.media.net"}, nil)()
 	return nil
 }
 
