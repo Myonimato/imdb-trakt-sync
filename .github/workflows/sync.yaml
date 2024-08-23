@@ -4,7 +4,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "50 23 * * *" #sync only once at the end of the day
+    - cron: "* * 30 2 *" #sync only once at the end of the day
   workflow_dispatch:
 env:
   ITS_IMDB_AUTH: ${{ secrets.IMDB_AUTH }}
